@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.yod.dedenew.R;
 import com.yod.dedenew.ui.base.BaseActivity;
+import com.yod.dedenew.ui.fragment.NewsFragment;
 import com.yod.dedenew.ui.fragment.TestFragment;
 import com.yod.dedenew.view.HackViewPager;
 
@@ -39,7 +40,7 @@ public class MainActivity extends BaseActivity {
     private void initView() {
         TestAdapter adapter = new TestAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-        viewPager.setIsPagingEnabled(true);
+        viewPager.setIsPagingEnabled(false);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -68,12 +69,12 @@ public class MainActivity extends BaseActivity {
     }
 
     public class TestAdapter extends FragmentStatePagerAdapter {
-        List<TestFragment> list;
+        List<Fragment> list;
 
         public TestAdapter(FragmentManager fm) {
             super(fm);
             list = new ArrayList<>();
-            list.add(TestFragment.newInstance("1111"));
+            list.add(NewsFragment.newInstance("1111"));
             list.add(TestFragment.newInstance("22222222"));
             list.add(TestFragment.newInstance("322333"));
             list.add(TestFragment.newInstance("4444"));
@@ -81,7 +82,6 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public Fragment getItem(int position) {
-
             return list.get(position);
         }
 
