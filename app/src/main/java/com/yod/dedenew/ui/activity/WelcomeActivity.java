@@ -1,7 +1,6 @@
 package com.yod.dedenew.ui.activity;
 
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
@@ -11,14 +10,9 @@ import android.widget.TextView;
 
 import com.yod.dedenew.R;
 
-import java.util.concurrent.TimeUnit;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.schedulers.Schedulers;
+
 
 /**
  * Create by twq on 2016/11/13 21:24
@@ -67,7 +61,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void startMainActivity() {
-        Observable.timer(1000, TimeUnit.MILLISECONDS)
+        /*Observable.timer(1000, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<Long>() {
@@ -76,6 +70,6 @@ public class WelcomeActivity extends AppCompatActivity {
                         startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                         finish();
                     }
-                });
+                });*/
     }
 }
