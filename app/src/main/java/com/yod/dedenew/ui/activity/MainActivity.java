@@ -47,7 +47,7 @@ public class MainActivity extends BaseActivity {
                 switch (item.getItemId()) {
                     case R.id.add:
                         viewPager.setCurrentItem(0);
-                        navigationView.setItemBackgroundResource( R.color.colorPrimaryDark);
+                        navigationView.setItemBackgroundResource(R.color.colorPrimaryDark);
                         break;
                     case R.id.delete:
                         viewPager.setCurrentItem(1);

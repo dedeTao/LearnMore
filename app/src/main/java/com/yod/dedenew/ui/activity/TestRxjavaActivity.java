@@ -21,12 +21,17 @@ public class TestRxjavaActivity extends AppCompatActivity {
 
     private Observable<String> observable;
     private Subscriber<String> subscriber;
+    private int count;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         initRxjava();
+        initView();
+    }
+
+    private void initView() {
         TextView textview = (TextView) findViewById(R.id.text);
         textview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +39,17 @@ public class TestRxjavaActivity extends AppCompatActivity {
                 observable.subscribe(subscriber);//订阅
             }
         });
+
+        TextView textView2 = (TextView) findViewById(R.id.text2);
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Observable.just("just1", "just2");//依次发送"just1"和"just2"
+            }
+        });
+
+        TextView textView3 = (TextView) findViewById(R.id.text3);
+//        RxView
     }
 
     private void initRxjava() {
@@ -49,7 +65,8 @@ public class TestRxjavaActivity extends AppCompatActivity {
         subscriber = new Subscriber<String>() {
             @Override
             public void onCompleted() {
-                Toast.makeText(TestRxjavaActivity.this, "已经订阅", Toast.LENGTH_LONG).show();
+                count++;
+                Toast.makeText(TestRxjavaActivity.this, "已经订阅-" + count, Toast.LENGTH_LONG).show();
                 Log.d("twq", "onCompleted: ");
             }
 

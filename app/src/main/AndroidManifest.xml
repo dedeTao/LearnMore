@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:name=".NewsApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.TestRxjavaActivity">
+        <activity android:name=".daggertest.DaggerTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
