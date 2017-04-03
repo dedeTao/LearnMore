@@ -71,4 +71,7 @@ dependencies {
     def dagger_version = "2.8"
     compile "com.google.dagger:dagger:${dagger_version}"
     apt "com.google.dagger:dagger-compiler:${dagger_version}"
+
+/*--------------fragmentation------------------------------*/
+    compile 'me.yokeyword:fragmentation:0.10.1'
 }

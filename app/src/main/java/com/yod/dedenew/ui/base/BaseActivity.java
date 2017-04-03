@@ -3,17 +3,18 @@ package com.yod.dedenew.ui.base;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.yod.dedenew.R;
 
+import me.yokeyword.fragmentation.SupportActivity;
+
 /**
  * Create by twq on 2016/11/13 21:38
  * Email 593912993@qq.com
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends SupportActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
