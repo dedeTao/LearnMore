@@ -15,6 +15,7 @@ import rx.Subscriber;
 
 /**
  * Created by twq on 2017/4/1.
+ * 最简单的模式
  */
 
 public class TestOneActivity extends AppCompatActivity {
