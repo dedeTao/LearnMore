@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:name=".NewsApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".Rxjava.TestThreeActivity">
+        <activity android:name=".Rxjava.TestFourActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
