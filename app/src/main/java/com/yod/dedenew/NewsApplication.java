@@ -11,4 +11,5 @@ public class NewsApplication extends Application {
     public void onCreate() {
         super.onCreate();
     }
+//    String
 }
